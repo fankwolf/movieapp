@@ -1,0 +1,125 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.page h2 {
+  font-size: 40px;
+  color: #333;
+}
+
+.page p {
+  max-width: 600px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  /* Typography */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  line-height: 1.3;
+  
+  /* Color & Background */
+  color: #1a1d21 !important;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  
+  /* Spacing & Alignment */
+  padding: 1.1rem 1.5rem;
+  margin: 0;
+  text-align: center;
+  
+  /* Borders & Effects */
+  border-bottom: 1px solid #e4e7ec;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 
+    0 4px 6px -2px rgba(16, 24, 40, 0.03),
+    0 2px 4px -2px rgba(16, 24, 40, 0.03);
+  
+  /* Transition Effects */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Advanced Features */
+  position: relative;
+  overflow: hidden;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Hover Animation */
+.card:hover h3 {
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%);
+  box-shadow: 
+    0 6px 8px -3px rgba(16, 24, 40, 0.05),
+    0 4px 6px -4px rgba(16, 24, 40, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Active State */
+.card h3:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 4px -2px rgba(16, 24, 40, 0.05),
+    0 1px 2px -1px rgba(16, 24, 40, 0.03);
+}
+
+/* Subtle Accent Bar */
+.card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: #3b82f6;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.card:hover h3::after {
+  width: 60px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
